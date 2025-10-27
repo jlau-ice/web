@@ -21,7 +21,6 @@ export const menus: Array<RouteRecordRaw> = [
     {
         name: '系统管理',
         path: '/sys',
-        component: () => import('@/views/home/Home.vue'),
         children: [
             {
                 name: '用户管理',
@@ -50,8 +49,8 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理',
-        path: '/task/manage',
+        name: '任务管理2',
+        path: '/home2',
         component: () => import('@/views/task/TaskManage.vue'),
         meta: {
             id: uuid(),
@@ -59,14 +58,22 @@ export const menus: Array<RouteRecordRaw> = [
         }
     },
     {
+        name: '任务管理1',
+        path: '/home1',
+        component: () => import('@/views/model/ModelManage.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'ChatSquare',
+        }
+    },
+    {
         name: '模型配置',
-        path: '/model/config',
-        component: () => import('@/views/model/ModelConfig.vue'),
+        path: '/model',
         children: [
             {
                 name: '任务管理',
-                path: '/task/manage',
-                component: () => import('@/views/task/TaskManage.vue'),
+                path: '/config',
+                component: () => import('@/views/model/ModelConfig.vue'),
                 meta: {
                     id: uuid(),
                     icon: 'Lock',
