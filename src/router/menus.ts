@@ -1,4 +1,3 @@
-import { ACCESS_ENUM } from '@/access/accessEnum'
 import type { RouteRecordRaw } from 'vue-router'
 
 export const menus: Array<RouteRecordRaw> = [
@@ -11,7 +10,6 @@ export const menus: Array<RouteRecordRaw> = [
     name: '任务管理',
     path: '/task/manage',
     component: () => import('@/views/task/TaskManage.vue'),
-    meta: { access: ACCESS_ENUM.ADMIN },
   },
   {
     name: '模型配置',

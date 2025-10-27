@@ -1,19 +1,21 @@
 <template>
-  <a-layout>
-    <a-layout-header>
-      <Header />
-    </a-layout-header>
-    <a-layout-content>
-      <Content />
-    </a-layout-content>
-    <!-- <a-layout-footer>
-      <Footer />
-    </a-layout-footer> -->
-  </a-layout>
+  <el-container>
+    <el-header class="h-[60px] overflow-hidden border-b border-b-[#e0e0e0] border-solid bg-[#0F72DC] flex items-center">
+      <Header/>
+    </el-header>
+    <el-container>
+      <el-aside width="200px">
+        <SideBar/>
+      </el-aside>
+      <el-main>
+        <Content/>
+      </el-main>
+    </el-container>
+  </el-container>
 </template>
 <script lang="ts" setup>
 import Header from '@/layouts/components/Header.vue'
 import Content from '@/layouts/components/Content.vue'
-// import Footer from '@/layouts/components/Footer.vue';
+import SideBar from '@/layouts/components/SideBar.vue';
 </script>
 <style lang="scss" scoped></style>

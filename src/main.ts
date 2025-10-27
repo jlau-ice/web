@@ -6,10 +6,12 @@ import '@arco-design/web-vue/dist/arco.css'
 import ArcoVueIcon from '@arco-design/web-vue/es/icon'
 import { createPinia } from 'pinia'
 import router from './router'
-import '@/permission'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 import '@/request'
 const pinia = createPinia()
 const app = createApp(App)
+app.use(ElementPlus)
 app.use(ArcoVueIcon)
 app.use(ArcoVue)
 app.use(pinia)

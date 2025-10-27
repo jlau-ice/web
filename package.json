@@ -11,8 +11,10 @@
     "openapi": "node openapi.config.js"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
     "@vue/eslint-config-prettier": "^10.2.0",
     "axios": "^1.11.0",
+    "element-plus": "^2.11.5",
     "form-data": "^4.0.4",
     "pinia": "^3.0.3",
     "tailwindcss": "^3.4.0",
@@ -20,9 +22,9 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@umijs/openapi": "^1.13.0",
     "@arco-design/web-vue": "^2.57.0",
     "@types/node": "^24.3.1",
+    "@umijs/openapi": "^1.13.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.7.0",
@@ -35,10 +37,9 @@
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "sass-embedded": "^1.92.1",
-    "tailwindcss": "^4.1.13",
+    "tailwindcss": "^3.4.18",
     "typescript": "~5.8.3",
     "vite": "^7.1.2",
-    "vite-plugin-vue-devtools": "^7.6.5",
     "vue-tsc": "^3.0.5"
   }
 }
