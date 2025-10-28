@@ -49,41 +49,115 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '标准分类管理',
+        path: '/standard-category',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '基础编码标准',
+                path: '/basic-coding',
+                component: () => import('@/views/standard/basicCoding.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'Key',
+                }
+            },
+            {
+                name: '数据元标准',
+                path: '/data-element',
+                component: () => import('@/views/standard/dataElement.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Document',
+                }
+            },
+            {
+                name: '接口标准',
+                path: '/interface-standard',
+                component: () => import('@/views/standard/interfaceStandard.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Connection',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'FolderOpened',
         }
     },
+    {
+        name: '标准模板管理',
+        path: '/template-manage',
+        children: [
+            {
+                name: '模板库管理',
+                path: '/template-library',
+                component: () => import('@/views/template/templateLibrary.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Files',
+                }
+            },
+            {
+                name: '模板版本控制',
+                path: '/template-version',
+                component: () => import('@/views/template/templateVersion.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Histogram',
+                }
+            },
+            {
+                name: '模板发布管理',
+                path: '/template-publish',
+                component: () => import('@/views/template/templatePublish.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Promotion',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Collection',
+        }
+    },
+    {
+        name: '标准目录服务',
+        path: '/mulu',
+        children: [
+            {
+                name: '模板库管理',
+                path: '/template-library',
+                component: () => import('@/views/template/templateLibrary.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Folder',
+                }
+            },
+            {
+                name: '模板版本控制',
+                path: '/template-version',
+                component: () => import('@/views/template/templateVersion.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Histogram',
+                }
+            },
+            {
+                name: '模板发布管理',
+                path: '/template-publish',
+                component: () => import('@/views/template/templatePublish.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Promotion',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Folder',
+        }
+    }
 
 ]
