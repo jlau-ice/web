@@ -135,15 +135,6 @@ export const menus: Array<RouteRecordRaw> = [
                     icon: 'Share',
                 }
             },
-            {
-                name: '统一运营监控层',
-                path: '/operation-monitor',
-                component: () => import('@/views/dataCollect/OperationMonitor.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'PieChart',
-                }
-            }
         ],
         meta: {
             id: uuid(),

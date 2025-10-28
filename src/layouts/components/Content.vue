@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[calc(100vh-60px)] bg-[#FFF] overflow-y-auto background-img p-[20px]">
+  <div class="h-[calc(100vh-60px)] bg-[#FFF] overflow-y-auto background-img ">
     <router-view />
   </div>
 </template>
