@@ -49,41 +49,97 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '溯源业务管理',
+        path: '/traceability-business',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '生产档案管理',
+                path: '/production-archive',
+                component: () => import('@/views/traceability/productionArchive.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'Files',
+                }
+            },
+            {
+                name: '流通轨迹跟踪',
+                path: '/circulation-track',
+                component: () => import('@/views/traceability/circulationTrack.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Position',
+                }
+            },
+            {
+                name: '质量检测记录',
+                path: '/quality-inspection',
+                component: () => import('@/views/traceability/qualityInspection.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Finished',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'DataBoard',
         }
     },
+    {
+        name: '查询统计服务',
+        path: '/query-statistics',
+        children: [
+            {
+                name: '溯源查询分析',
+                path: '/traceability-query',
+                component: () => import('@/views/query/traceabilityQuery.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Search',
+                }
+            },
+            {
+                name: '业务数据统计',
+                path: '/business-statistics',
+                component: () => import('@/views/query/businessStatistics.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DataAnalysis',
+                }
+            },
+            {
+                name: '报表生成导出',
+                path: '/report-export',
+                component: () => import('@/views/query/reportExport.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DocumentCopy',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'TrendCharts',
+        }
+    },
+    {
+        name: '企业信息管理',
+        path: '/qu',
+        children: [
+            {
+                name: '报表生成导出',
+                path: '/report-export',
+                component: () => import('@/views/query/reportExport.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DocumentCopy',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'OfficeBuilding',
+        }
+    }
 
 ]
