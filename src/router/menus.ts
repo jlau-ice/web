@@ -49,41 +49,115 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: ' 服务项目管理',
+        path: '/s',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '服务流程设计',
+                path: '/service-flow-design',
+                component: () => import('@/views/service/serviceFlowDesign.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'Grid',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Grid',
         }
     },
-
+    {
+        name: '服务编排设计',
+        path: '/service-orchestration',
+        children: [
+            {
+                name: '服务流程设计',
+                path: '/service-flow-design',
+                component: () => import('@/views/service/serviceFlowDesign.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+            {
+                name: '组件拖拽编排',
+                path: '/component-orchestration',
+                component: () => import('@/views/service/componentOrchestration.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Rank',
+                }
+            },
+            {
+                name: '逻辑条件配置',
+                path: '/logic-condition-config',
+                component: () => import('@/views/service/logicConditionConfig.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Operation',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'DataLine',
+        }
+    },
+    {
+        name: '服务测试调试',
+        path: '/service-testing',
+        children: [
+            {
+                name: '测试用例管理',
+                path: '/test-case-manage',
+                component: () => import('@/views/service/testCaseManage.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DocumentChecked',
+                }
+            },
+            {
+                name: '在线调试工具',
+                path: '/online-debug-tool',
+                component: () => import('@/views/service/onlineDebugTool.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Monitor',
+                }
+            },
+            {
+                name: '性能压力测试',
+                path: '/performance-test',
+                component: () => import('@/views/service/performanceTest.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'TrendCharts',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'VideoPlay',
+        }
+    },
+    {
+        name: ' 服务版本管理',
+        path: '/sb',
+        children: [
+            {
+                name: '服务流程设计',
+                path: '/service-flow-design',
+                component: () => import('@/views/service/serviceFlowDesign.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Memo',
+        }
+    },
 ]
