@@ -48,42 +48,119 @@ export const menus: Array<RouteRecordRaw> = [
     },
 
     // 你所需要修改的路由
+    // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '标签标准定义',
+        path: '/tag-standard',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '标签基本信息',
+                path: '/tag-basic-info',
+                component: () => import('@/views/tag/tagBasicInfo.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'InfoFilled',
+                }
+            },
+            {
+                name: '标签计算规则',
+                path: '/tag-calculation-rule',
+                component: () => import('@/views/tag/tagCalculationRule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Cpu',
+                }
+            },
+            {
+                name: '数据来源配置',
+                path: '/tag-data-source',
+                component: () => import('@/views/tag/tagDataSource.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Link',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'DocumentChecked',
         }
     },
+    {
+        name: '标签关系管理',
+        path: '/tag-relation',
+        children: [
+            {
+                name: '标签关联关系',
+                path: '/tag-association',
+                component: () => import('@/views/tag/tagAssociation.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Connection',
+                }
+            },
+            {
+                name: '标签层级关系',
+                path: '/tag-hierarchy',
+                component: () => import('@/views/tag/tagHierarchy.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Sort',
+                }
+            },
+            {
+                name: '标签依赖分析',
+                path: '/tag-dependency',
+                component: () => import('@/views/tag/tagDependency.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Position',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Share',
+        }
+    },
+    {
+        name: '标签质量控制',
+        path: '/a',
+        children: [
+            {
+                name: '标签关联关系',
+                path: '/tag-association',
+                component: () => import('@/views/tag/tagAssociation.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Connection',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Grid',
+        }
+    },
+    {
+        name: '标签查询服务',
+        path: '/t',
+        children: [
+            {
+                name: '标签关联关系',
+                path: '/tag-association',
+                component: () => import('@/views/tag/tagAssociation.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Connection',
+                }
+            },
+
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Suitcase',
+        }
+    }
 
 ]
