@@ -48,32 +48,33 @@ export const menus: Array<RouteRecordRaw> = [
     },
 
     // 你所需要修改的路由
+    // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '基本信息管理',
+        path: '/basic-info',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '资产基本信息',
+                path: '/asset-basic-info',
+                component: () => import('@/views/asset/assetBasicInfo.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'InfoFilled',
+                }
+            },
+            {
+                name: '目录结构维护',
+                path: '/catalog-structure',
+                component: () => import('@/views/asset/catalogStructure.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'FolderOpened',
+                }
+            },
+            {
+                name: '分类权限控制',
+                path: '/category-permission',
+                component: () => import('@/views/asset/categoryPermission.vue'),
                 meta: {
                     id: uuid(),
                     icon: 'Lock',
@@ -82,8 +83,83 @@ export const menus: Array<RouteRecordRaw> = [
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Document',
         }
     },
+    {
+        name: '资产检索服务',
+        path: '/asset-search',
+        children: [
+            {
+                name: '资产快速检索',
+                path: '/quick-search',
+                component: () => import('@/views/search/quickSearch.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Search',
+                }
+            },
+            {
+                name: '高级条件查询',
+                path: '/advanced-query',
+                component: () => import('@/views/search/advancedQuery.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+            {
+                name: '检索结构分析',
+                path: '/search-analysis',
+                component: () => import('@/views/search/searchAnalysis.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DataAnalysis',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Search',
+        }
+    },
+    {
+        name: '资产字典',
+        path: '/a',
+        children: [
+            {
+                name: '资产快速检索',
+                path: '/quick-search',
+                component: () => import('@/views/search/quickSearch.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Search',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Collection',
+        }
+    },
+    {
+        name: '资产统计',
+        path: '/b',
+        children: [
+            {
+                name: '资产快速检索',
+                path: '/quick-search',
+                component: () => import('@/views/search/quickSearch.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Search',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'DataAnalysis',
+        }
+    }
 
 ]
