@@ -43,7 +43,7 @@ export const menus: Array<RouteRecordRaw> = [
         ],
         meta: {
             id: uuid(),
-            icon: 'HomeFilled',
+            icon: 'Setting',
         }
     },
 
