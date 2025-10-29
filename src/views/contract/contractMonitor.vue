@@ -845,27 +845,27 @@ onUnmounted(() => {
         style="width: 100%"
         :default-sort="{ prop: 'callTime', order: 'descending' }"
       >
-        <el-table-column type="index" label="序号" width="60" align="center" />
+        <el-table-column type="index" label="序号"  align="center" />
         
-        <el-table-column prop="txHash" label="交易哈希" width="150" show-overflow-tooltip>
+        <el-table-column prop="txHash" label="交易哈希" show-overflow-tooltip>
           <template #default="{ row }">
             <el-link type="primary" :underline="false">{{ formatAddress(row.txHash) }}</el-link>
           </template>
         </el-table-column>
 
-        <el-table-column prop="contractAddress" label="合约地址" width="150" show-overflow-tooltip>
+        <el-table-column prop="contractAddress" label="合约地址" show-overflow-tooltip>
           <template #default="{ row }">
             <el-link type="primary" :underline="false">{{ formatAddress(row.contractAddress) }}</el-link>
           </template>
         </el-table-column>
 
-        <el-table-column prop="methodName" label="调用方法" width="140" align="center">
+        <el-table-column prop="methodName" label="调用方法" align="center">
           <template #default="{ row }">
             <el-tag>{{ row.methodName }}</el-tag>
           </template>
         </el-table-column>
 
-        <el-table-column prop="caller" label="调用方" width="150" show-overflow-tooltip>
+        <el-table-column prop="caller" label="调用方" show-overflow-tooltip>
           <template #default="{ row }">
             <span>{{ formatAddress(row.caller) }}</span>
           </template>
@@ -1125,9 +1125,6 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 .contract-monitor-container {
-  padding: 20px;
-  background-color: #f5f7fa;
-  min-height: calc(100vh - 60px);
 
   .statistics-row {
     margin-bottom: 20px;

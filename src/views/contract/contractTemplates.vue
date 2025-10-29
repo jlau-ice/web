@@ -1198,10 +1198,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .contract-templates-container {
-  padding: 20px;
-  background: #f5f7fa;
-  min-height: calc(100vh - 100px);
-
   .top-toolbar {
     display: flex;
     justify-content: space-between;

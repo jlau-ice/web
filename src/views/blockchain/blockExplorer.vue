@@ -868,8 +868,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .block-explorer {
-  padding: 20px;
-  background-color: #f5f7fa;
   min-height: calc(100vh - 100px);
 
   .search-card {

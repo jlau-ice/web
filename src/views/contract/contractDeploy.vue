@@ -527,31 +527,31 @@ onMounted(() => {
         style="width: 100%"
         stripe
       >
-        <el-table-column prop="name" label="合约名称" width="150" />
-        <el-table-column prop="address" label="合约地址" width="200">
+        <el-table-column prop="name" label="合约名称"/>
+        <el-table-column prop="address" label="合约地址" >
           <template #default="{ row }">
             <el-tooltip :content="row.address" placement="top">
               <span class="address-text">{{ row.address.slice(0, 10) }}...{{ row.address.slice(-8) }}</span>
             </el-tooltip>
           </template>
         </el-table-column>
-        <el-table-column prop="network" label="部署网络" width="180">
+        <el-table-column prop="network" label="部署网络">
           <template #default="{ row }">
             <el-tag size="small">
               {{ networkOptions.find(n => n.value === row.network)?.label || row.network }}
             </el-tag>
           </template>
         </el-table-column>
-        <el-table-column prop="version" label="版本号" width="120" />
-        <el-table-column prop="deployTime" label="部署时间" width="180" />
-        <el-table-column prop="status" label="状态" width="100">
+        <el-table-column prop="version" label="版本号"/>
+        <el-table-column prop="deployTime" label="部署时间"/>
+        <el-table-column prop="status" label="状态">
           <template #default="{ row }">
             <el-tag :type="getStatusType(row.status)">
               {{ getStatusText(row.status) }}
             </el-tag>
           </template>
         </el-table-column>
-        <el-table-column label="操作" fixed="right" width="280">
+        <el-table-column label="操作" fixed="right" >
           <template #default="{ row }">
             <el-button link type="primary" size="small" @click="viewDetail(row)">
               详情
@@ -784,17 +784,17 @@ onMounted(() => {
       :title="`${currentContract?.name} - 版本管理`"
       width="900px"
     >
-      <el-table :data="versionList" style="width: 100%">
-        <el-table-column prop="version" label="版本号" width="120" />
-        <el-table-column prop="contractAddress" label="合约地址" width="200">
+      <el-table :data="versionList" >
+        <el-table-column prop="version" label="版本号"/>
+        <el-table-column prop="contractAddress" label="合约地址">
           <template #default="{ row }">
             <el-tooltip :content="row.contractAddress" placement="top">
               <span class="address-text">{{ row.contractAddress.slice(0, 10) }}...{{ row.contractAddress.slice(-8) }}</span>
             </el-tooltip>
           </template>
         </el-table-column>
-        <el-table-column prop="deployTime" label="部署时间" width="180" />
-        <el-table-column prop="status" label="状态" width="120">
+        <el-table-column prop="deployTime" label="部署时间" />
+        <el-table-column prop="status" label="状态" >
           <template #default="{ row }">
             <el-tag :type="getVersionStatusType(row.status)">
               {{ getVersionStatusText(row.status) }}
@@ -802,7 +802,7 @@ onMounted(() => {
           </template>
         </el-table-column>
         <el-table-column prop="description" label="版本说明" />
-        <el-table-column label="操作" width="180" fixed="right">
+        <el-table-column label="操作"  fixed="right">
           <template #default="{ row }">
             <el-button
               v-if="row.status !== 'current'"
@@ -894,9 +894,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .contract-deploy-container {
-  padding: 20px;
-  background-color: #f5f7fa;
-  min-height: 100vh;
 
   .header-card {
     margin-bottom: 20px;

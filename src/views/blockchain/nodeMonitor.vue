@@ -850,8 +850,6 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 .node-monitor-container {
-  padding: 20px;
-  background-color: #f5f7fa;
   min-height: calc(100vh - 120px);
 }
 

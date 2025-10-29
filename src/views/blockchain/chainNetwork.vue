@@ -1055,8 +1055,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .chain-network-container {
-  padding: 20px;
-
   .header-card {
     margin-bottom: 20px;
 
