@@ -48,42 +48,110 @@ export const menus: Array<RouteRecordRaw> = [
     },
 
     // 你所需要修改的路由
+    // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '异常行为检测',
+        path: '/abnormal-behavior',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '违规操作识别',
+                path: '/violation-ops',
+                component: () => import('@/views/behavior/violationOps.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'Warning',
+                }
+            },
+            {
+                name: '区域入侵检测',
+                path: '/intrusion-detect',
+                component: () => import('@/views/behavior/intrusionDetect.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Position',
+                }
+            },
+            {
+                name: '安全规范检测',
+                path: '/safety-check',
+                component: () => import('@/views/behavior/safetyCheck.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Check',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Monitor',
         }
     },
+    {
+        name: '出入库监管',
+        path: '/in-out-supervise',
+        children: [
+            {
+                name: '货物清点识别',
+                path: '/cargo-count',
+                component: () => import('@/views/supervise/cargoCount.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Box',
+                }
+            },
+            {
+                name: '单据核对验证',
+                path: '/document-verify',
+                component: () => import('@/views/supervise/documentVerify.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DocumentChecked',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Files',
+        }
+    },
+    {
+        name: '权限日志管理',
+        path: '/in',
+        children: [
+            {
+                name: '单据核对验证',
+                path: '/document-verify',
+                component: () => import('@/views/supervise/documentVerify.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DocumentChecked',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'TakeawayBox',
+        }
+    },
+    {
+        name: '紧急事件处理',
+        path: '/ian',
+        children: [
+            {
+                name: '货物清点识别',
+                path: '/cargo-count',
+                component: () => import('@/views/supervise/cargoCount.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Box',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'BellFilled',
+        }
+    },
+
 
 ]
