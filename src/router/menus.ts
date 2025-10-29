@@ -49,40 +49,114 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '表单设计管理',
+        path: '/form',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '表单模板设计',
+                path: '/form-template',
+                component: () => import('@/views/form/formTemplate.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Document',
+                }
+            },
+            {
+                name: '字段权限配置',
+                path: '/field-permission',
+                component: () => import('@/views/form/fieldPermission.vue'),
                 meta: {
                     id: uuid(),
                     icon: 'Lock',
                 }
             },
+            {
+                name: '验证规则设置',
+                path: '/validat',
+                component: () => import('@/views/form/validationRule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Checked',
+                }
+            },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Edit',
+        }
+    },
+    {
+        name: '规则配置管理',
+        path: '/rule-config',
+        children: [
+            {
+                name: '业务规则定义',
+                path: '/business-rule',
+                component: () => import('@/views/rule/businessRule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+            {
+                name: '条件分支配置',
+                path: '/condition-branch',
+                component: () => import('@/views/rule/conditionBranch.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Connection',
+                }
+            },
+            {
+                name: '验证规则',
+                path: '/rule-validation',
+                component: () => import('@/views/rule/ruleValidation.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Finished',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'DataAnalysis',
+        }
+    },
+    {
+        name: '流程设计',
+        path: '/lc',
+        children: [
+            {
+                name: '11',
+                path: '/busines',
+                component: () => import('@/views/rule/businessRule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Operation',
+        }
+    }, {
+        name: '流程验证',
+        path: '/lc2',
+        children: [
+            {
+                name: '231',
+                path: '/busi',
+                component: () => import('@/views/rule/businessRule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Menu',
         }
     },
 
