@@ -49,41 +49,116 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '多模态分析',
+        path: '/multimodal-analysis',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '文本内容分析',
+                path: '/text-analysis',
+                component: () => import('@/views/analysis/textAnalysis.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'Document',
+                }
+            },
+            {
+                name: '图像行为识别',
+                path: '/image-behavior',
+                component: () => import('@/views/analysis/imageBehavior.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Picture',
+                }
+            },
+            {
+                name: '视频动作检测',
+                path: '/video-action',
+                component: () => import('@/views/analysis/videoAction.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'VideoPlay',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'DataAnalysis',
         }
     },
+    {
+        name: '违规规则库',
+        path: '/violation-rules',
+        children: [
+            {
+                name: '规则模板管理',
+                path: '/rule-templates',
+                component: () => import('@/views/rules/ruleTemplates.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Files',
+                }
+            },
+            {
+                name: '自定义规则配置',
+                path: '/custom-rules',
+                component: () => import('@/views/rules/customRules.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+            {
+                name: '规则版本控制',
+                path: '/rule-versions',
+                component: () => import('@/views/rules/ruleVersions.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Histogram',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Collection',
+        }
+    },
+    {
+        name: '样本库维护',
+        path: '/vi1',
+        children: [
+            {
+                name: '规则模板管14理',
+                path: '/rule-temtes',
+                component: () => import('@/views/rules/ruleTemplates.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Files',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Grid',
+        }
+    },
+    {
+        name: '特征工程管理',
+        path: '/vi',
+        children: [
+            {
+                name: '规则模理',
+                path: '/rule-templa',
+                component: () => import('@/views/rules/ruleTemplates.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Files',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'PriceTag',
+        }
+    }
 
 ]

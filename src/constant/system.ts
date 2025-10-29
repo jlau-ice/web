@@ -1,1 +1,1 @@
-export const SYS_NAME:string = "产业数据汇聚平台"
+export const SYS_NAME:string = "违规行为识别"
