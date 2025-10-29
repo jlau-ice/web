@@ -782,18 +782,18 @@ onMounted(() => {
         style="width: 100%"
         highlight-current-row
       >
-        <el-table-column type="index" label="序号" width="60" align="center" />
-        <el-table-column prop="testNo" label="检测编号" width="160" align="center" />
-        <el-table-column prop="batchNo" label="产品批次" width="150" align="center" />
-        <el-table-column prop="productName" label="产品名称" width="120" align="center" />
-        <el-table-column label="检测环节" width="120" align="center">
+        <el-table-column type="index" label="序号"  align="center" />
+        <el-table-column prop="testNo" label="检测编号" align="center" />
+        <el-table-column prop="batchNo" label="产品批次"  align="center" />
+        <el-table-column prop="productName" label="产品名称"  align="center" />
+        <el-table-column label="检测环节" align="center">
           <template #default="{ row }">
             <el-tag type="info" size="small">
               {{ stageConfig[row.testStage].icon }} {{ stageConfig[row.testStage].label }}
             </el-tag>
           </template>
         </el-table-column>
-        <el-table-column prop="testProject" label="检测项目" width="140" align="center" />
+        <el-table-column prop="testProject" label="检测项目" align="center" />
         <el-table-column label="检测结果" width="100" align="center">
           <template #default="{ row }">
             <el-tag :type="resultConfig[row.testResult].type" effect="dark">
@@ -801,15 +801,15 @@ onMounted(() => {
             </el-tag>
           </template>
         </el-table-column>
-        <el-table-column prop="testDate" label="检测时间" width="120" align="center" />
-        <el-table-column prop="tester" label="检测人员" width="100" align="center" />
+        <el-table-column prop="testDate" label="检测时间"  align="center" />
+        <el-table-column prop="tester" label="检测人员" align="center" />
         <el-table-column label="复核状态" width="100" align="center">
           <template #default="{ row }">
             <el-tag v-if="row.reviewer" type="success" size="small">已复核</el-tag>
             <el-tag v-else type="warning" size="small">待复核</el-tag>
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="280" align="center" fixed="right">
+        <el-table-column label="操作" width="350" align="center" fixed="right">
           <template #default="{ row }">
             <el-button
               type="primary"
@@ -1183,9 +1183,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .quality-inspection-container {
-  padding: 20px;
-  background: #f5f7fa;
-  min-height: calc(100vh - 100px);
 
   // 统计卡片
   .statistics-cards {

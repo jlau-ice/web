@@ -1069,9 +1069,6 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 .business-statistics {
-  padding: 20px;
-  background-color: #f5f7fa;
-  min-height: 100vh;
 }
 
 .filter-card {

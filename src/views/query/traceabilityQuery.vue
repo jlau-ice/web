@@ -983,9 +983,6 @@ const exportData = () => {
 
 <style scoped lang="scss">
 .traceability-query-container {
-  padding: 20px;
-  background-color: #f5f7fa;
-  min-height: calc(100vh - 120px);
 
   .query-card {
     margin-bottom: 20px;

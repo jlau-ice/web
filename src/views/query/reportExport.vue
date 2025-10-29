@@ -1036,9 +1036,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .report-export-container {
-  padding: 20px;
-  background: #f5f7fa;
-  min-height: 100vh;
 
   .header-card {
     margin-bottom: 20px;

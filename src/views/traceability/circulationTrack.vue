@@ -837,9 +837,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .circulation-track-container {
-  padding: 20px;
-  background: #f5f7fa;
-  min-height: calc(100vh - 100px);
 
   .query-card {
     margin-bottom: 20px;
