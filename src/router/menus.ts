@@ -48,41 +48,79 @@ export const menus: Array<RouteRecordRaw> = [
     },
 
     // 你所需要修改的路由
+// 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '区块链管理',
+        path: '/blockchain-manage',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '链网络管理',
+                path: '/chain-network',
+                component: () => import('@/views/blockchain/chainNetwork.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'Connection',
+                }
+            },
+            {
+                name: '节点状态监控',
+                path: '/node-monitor',
+                component: () => import('@/views/blockchain/nodeMonitor.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Monitor',
+                }
+            },
+            {
+                name: '区块浏览器',
+                path: '/block-explorer',
+                component: () => import('@/views/blockchain/blockExplorer.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'View',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Cpu',
+        }
+    },
+    {
+        name: '智能合约服务',
+        path: '/smart-contract',
+        children: [
+            {
+                name: '合约模板库',
+                path: '/contract-templates',
+                component: () => import('@/views/contract/contractTemplates.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Collection',
+                }
+            },
+            {
+                name: '合约部署管理',
+                path: '/contract-deploy',
+                component: () => import('@/views/contract/contractDeploy.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Upload',
+                }
+            },
+            {
+                name: '合约调用监控',
+                path: '/contract-monitor',
+                component: () => import('@/views/contract/contractMonitor.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DataLine',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Document',
         }
     },
 
