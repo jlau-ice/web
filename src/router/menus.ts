@@ -123,5 +123,25 @@ export const menus: Array<RouteRecordRaw> = [
             icon: 'Document',
         }
     },
+    {
+        name: '时间戳服务',
+        path: '/sma',
+        children: [
+            {
+                name: '合约模板库',
+                path: '/contract-templates',
+                component: () => import('@/views/contract/contractTemplates.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Collection',
+                }
+            },
+
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Timer',
+        }
+    },
 
 ]
