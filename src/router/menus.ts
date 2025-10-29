@@ -49,41 +49,116 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: 'API服务管理',
+        path: '/api-service',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '接口权限管理',
+                path: '/api-permission',
+                component: () => import('@/views/api/apiPermission.vue'),
                 meta: {
                     id: uuid(),
                     icon: 'Lock',
                 }
             },
+            {
+                name: '访问密钥管理',
+                path: '/access-key',
+                component: () => import('@/views/api/accessKey.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Key',
+                }
+            },
+            {
+                name: '调用额度控制',
+                path: '/quota-control',
+                component: () => import('@/views/api/quotaControl.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Management',
         }
     },
+    {
+        name: '数据上链服务',
+        path: '/data-onchain',
+        children: [
+            {
+                name: '批量上链接口',
+                path: '/batch-upload',
+                component: () => import('@/views/onchain/batchUpload.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'UploadFilled',
+                }
+            },
+            {
+                name: '实时上链接口',
+                path: '/realtime-upload',
+                component: () => import('@/views/onchain/realtimeUpload.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Refresh',
+                }
+            },
+            {
+                name: '数据格式校验',
+                path: '/data-validate',
+                component: () => import('@/views/onchain/dataValidate.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Checked',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Promotion',
+        }
+    },
+    {
+        name: '查询验证服务',
+        path: '/da',
+        children: [
+            {
+                name: '批量上链接口',
+                path: '/batch-upload',
+                component: () => import('@/views/onchain/batchUpload.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'UploadFilled',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'ZoomIn',
+        }
+    },
+    {
+        name: '服务监控分析',
+        path: '/a',
+        children: [
+            {
+                name: '批量上链接口',
+                path: '/batch-upload',
+                component: () => import('@/views/onchain/batchUpload.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'UploadFilled',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Operation',
+        }
+    }
 
 ]
