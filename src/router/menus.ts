@@ -49,41 +49,109 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '模型配置',
-        path: '/model',
+        name: '园区模型展示',
+        path: '/park-model',
         children: [
             {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                name: '建筑模型管理',
+                path: '/building-model',
+                component: () => import('@/views/model/buildingModel.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'OfficeBuilding',
+                }
+            },
+            {
+                name: '环境场景渲染',
+                path: '/environment-render',
+                component: () => import('@/views/model/environmentRender.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Picture',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Box',
         }
     },
+    {
+        name: '场景效果配置',
+        path: '/scene-effect',
+        children: [
+            {
+                name: '天气效果模拟',
+                path: '/weather-effect',
+                component: () => import('@/views/scene/weatherEffect.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Sunny',
+                }
+            },
+            {
+                name: '昼夜模式切换',
+                path: '/daynight-switch',
+                component: () => import('@/views/scene/daynightSwitch.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Moon',
+                }
+            },
+            {
+                name: '特效参数调整',
+                path: '/effect-parameters',
+                component: () => import('@/views/scene/effectParameters.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'SetUp',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'MostlyCloudy',
+        }
+    },
+    {
+        name: '标注测量工具',
+        path: '/scenet',
+        children: [
+            {
+                name: '天气效果模拟',
+                path: '/weather-effect',
+                component: () => import('@/views/scene/weatherEffect.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Sunny',
+                }
+            },
+
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Money',
+        }
+    },
+    {
+        name: '应急预案演练',
+        path: '/scen66',
+        children: [
+            {
+                name: '天气效果模拟',
+                path: '/weather-effect',
+                component: () => import('@/views/scene/weatherEffect.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Sunny',
+                }
+            },
+
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Operation',
+        }
+    }
 
 ]
