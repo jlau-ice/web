@@ -1,1 +1,1 @@
-export const SYS_NAME:string = "产业数据汇聚平台"
+export const SYS_NAME:string = "AI 安防与环境监测"
