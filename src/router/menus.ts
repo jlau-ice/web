@@ -47,43 +47,41 @@ export const menus: Array<RouteRecordRaw> = [
         }
     },
 
-    // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '视频实时处理',
+        path: '/edge-processing',
+        component: () => import('@/views/ai-edge/EdgeProcessing.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'VideoPlay',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '异常情况快速识别',
+        path: '/anomaly-detection',
+        component: () => import('@/views/ai-edge/AnomalyDetection.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'AlarmClock',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: 'AI边缘设备集群',
+        path: '/edge-ops',
+        component: () => import('@/views/ai-edge/EdgeOps.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Cpu',
         }
     },
+    {
+        name: '决策支持与效率',
+        path: '/edge-decision',
+        component: () => import('@/views/ai-edge/EdgeDecision.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'DataAnalysis',
+        }
+    }
 
 ]
