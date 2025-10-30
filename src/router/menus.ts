@@ -49,41 +49,40 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '数据资产整合与归档',
+        path: '/asset-integration',
+        component: () => import('@/views/data-asset/AssetIntegration.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Files',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '资产分类与价值评估',
+        path: '/asset-evaluation',
+        component: () => import('@/views/data-asset/AssetEvaluation.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Collection',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '区块数据上链与存证',
+        path: '/blockchain-record',
+        component: () => import('@/views/data-asset/BlockchainRecord.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Link',
         }
     },
+    {
+        name: '安全交易与流通保障',
+        path: '/secure-transaction',
+        component: () => import('@/views/data-asset/SecureTransaction.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'Lock',
+        }
+    }
 
 ]
