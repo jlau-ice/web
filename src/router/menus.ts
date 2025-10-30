@@ -49,41 +49,39 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '区块链网络快速搭建',
+        path: '/blockchain-setup',
+        component: () => import('@/views/blockchain-baas/BlockchainSetup.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Connection',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '应用模板与业务开发',
+        path: '/app-templates',
+        component: () => import('@/views/blockchain-baas/AppTemplates.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'MagicStick',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '统一运维与资源管理',
+        path: '/unified-ops',
+        component: () => import('@/views/blockchain-baas/UnifiedOps.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Monitor',
         }
     },
-
+    {
+        name: '数字转型与效率赋能',
+        path: '/digital-transformation',
+        component: () => import('@/views/blockchain-baas/DigitalTransformation.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'TrendCharts',
+        }
+    }
 ]
