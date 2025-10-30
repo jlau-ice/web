@@ -49,41 +49,40 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '全景绩效指标整合',
+        path: '/performance-integration',
+        component: () => import('@/views/supply-chain/PerformanceIntegration.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'DataLine',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '绩效查询与统计',
+        path: '/real-time-query',
+        component: () => import('@/views/supply-chain/RealTimeQuery.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Search',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '预警与问题定位',
+        path: '/weakness-alert',
+        component: () => import('@/views/supply-chain/WeaknessAlert.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Warning',
         }
     },
+    {
+        name: '决策优化',
+        path: '/decision-optimization',
+        component: () => import('@/views/supply-chain/DecisionOptimization.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'TrendCharts',
+        }
+    }
 
 ]
