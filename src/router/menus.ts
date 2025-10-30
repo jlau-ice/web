@@ -49,41 +49,39 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '数据服务化统一发布',
+        path: '/service-publish',
+        component: () => import('@/views/data-service/ServicePublish.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Promotion',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '多元化服务形式支持',
+        path: '/service-forms',
+        component: () => import('@/views/data-service/ServiceForms.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'SetUp',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '服务目录与权限管理',
+        path: '/service-catalog',
+        component: () => import('@/views/data-service/ServiceCatalog.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'FolderOpened',
         }
     },
-
+    {
+        name: '数据复用与性能监测',
+        path: '/service-monitor',
+        component: () => import('@/views/data-service/ServiceMonitor.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'Platform',
+        }
+    }
 ]
