@@ -49,41 +49,40 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '全流程数据整合',
+        path: '/data-integration',
+        component: () => import('@/views/data-platform/DataIntegration.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Connection',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '可视化与低门槛操作',
+        path: '/visual-analysis',
+        component: () => import('@/views/data-platform/VisualAnalysis.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'DataBoard',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '高性能数据分析与支撑',
+        path: '/data-analysis',
+        component: () => import('@/views/data-platform/DataAnalysis.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Cpu',
         }
     },
+    {
+        name: '智能化决策与管理支持',
+        path: '/decision-support',
+        component: () => import('@/views/data-platform/DecisionSupport.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'TrendCharts',
+        }
+    }
 
 ]
