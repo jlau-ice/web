@@ -47,43 +47,41 @@ export const menus: Array<RouteRecordRaw> = [
         }
     },
 
-    // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '实时安全监控',
+        path: '/real-time-monitor',
+        component: () => import('@/views/ai-warehouse/RealTimeMonitor.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Monitor',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '风险自动化识别',
+        path: '/risk-identification',
+        component: () => import('@/views/ai-warehouse/RiskIdentification.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Warning',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '智能事件响应',
+        path: '/event-response',
+        component: () => import('@/views/ai-warehouse/EventResponse.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Bell',
         }
     },
+    {
+        name: '数据分析报告',
+        path: '/data-analysis-report',
+        component: () => import('@/views/ai-warehouse/DataAnalysisReport.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'DataAnalysis',
+        }
+    }
 
 ]
