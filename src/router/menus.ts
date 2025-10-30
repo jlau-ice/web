@@ -47,43 +47,41 @@ export const menus: Array<RouteRecordRaw> = [
         }
     },
 
-    // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '自动化内容审核',
+        path: '/content-audit',
+        component: () => import('@/views/ai-image/AuditContent.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Check',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '图像识别与分类',
+        path: '/image-classification',
+        component: () => import('@/views/ai-image/ImageClassification.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'PriceTag',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '图像质量优化',
+        path: '/image-processing',
+        component: () => import('@/views/ai-image/ImageProcessing.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'MagicStick',
         }
     },
+    {
+        name: '审核策略与反馈',
+        path: '/audit-strategy',
+        component: () => import('@/views/ai-image/AuditStrategy.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'SetUp',
+        }
+    }
 
 ]
