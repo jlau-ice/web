@@ -49,41 +49,39 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
+        name: '实时可视化监控',
+        path: '/visual-monitor',
+        component: () => import('@/views/data-supervision/VisualMonitor.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'DataLine',
         }
     },
     {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
+        name: '智能任务调度',
+        path: '/task-scheduling',
+        component: () => import('@/views/data-supervision/TaskScheduling.vue'),
         meta: {
             id: uuid(),
-            icon: 'ChatSquare',
+            icon: 'Timer',
         }
     },
     {
-        name: '模型配置',
-        path: '/model',
-        children: [
-            {
-                name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
-                meta: {
-                    id: uuid(),
-                    icon: 'Lock',
-                }
-            },
-        ],
+        name: '异常预警',
+        path: '/anomaly-alert',
+        component: () => import('@/views/data-supervision/AnomalyAlert.vue'),
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Warning',
         }
     },
-
+    {
+        name: '即时报告与决策',
+        path: '/instant-report',
+        component: () => import('@/views/data-supervision/InstantReport.vue'),
+        meta: {
+            id: uuid(),
+            icon: 'Document',
+        }
+    }
 ]
