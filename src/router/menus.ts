@@ -49,40 +49,83 @@ export const menus: Array<RouteRecordRaw> = [
 
     // 你所需要修改的路由
     {
-        name: '任务管理2',
-        path: '/home2',
-        component: () => import('@/views/task/TaskManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
-        name: '任务管理1',
-        path: '/home1',
-        component: () => import('@/views/model/ModelManage.vue'),
-        meta: {
-            id: uuid(),
-            icon: 'ChatSquare',
-        }
-    },
-    {
         name: '模型配置',
-        path: '/model',
+        path: '/supply-chain/model',
         children: [
             {
                 name: '任务管理',
-                path: '/config',
-                component: () => import('@/views/model/ModelConfig.vue'),
+                path: '/supply-chain/model/tasks',
+                component: () => import('@/views/supplychain/SupplyChainModule.vue'),
                 meta: {
                     id: uuid(),
-                    icon: 'Lock',
+                    icon: 'List',
+                    moduleKey: 'taskOrchestration',
                 }
             },
         ],
         meta: {
             id: uuid(),
-            icon: 'Refresh',
+            icon: 'Collection',
+        }
+    },
+    {
+        name: '数据中枢',
+        path: '/supply-chain/data',
+        children: [
+            {
+                name: '数据源管理',
+                path: '/supply-chain/data/sources',
+                component: () => import('@/views/supplychain/SupplyChainModule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'DataAnalysis',
+                    moduleKey: 'dataSources',
+                }
+            },
+            {
+                name: '数据质量监控',
+                path: '/supply-chain/data/quality',
+                component: () => import('@/views/supplychain/SupplyChainModule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'WarningFilled',
+                    moduleKey: 'dataQuality',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Histogram',
+        }
+    },
+    {
+        name: '需求感知',
+        path: '/supply-chain/demand',
+        children: [
+            {
+                name: '多维预测',
+                path: '/supply-chain/demand/forecast',
+                component: () => import('@/views/supplychain/SupplyChainModule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'TrendCharts',
+                    moduleKey: 'multiForecast',
+                }
+            },
+            {
+                name: '影响因素分析',
+                path: '/supply-chain/demand/factors',
+                component: () => import('@/views/supplychain/SupplyChainModule.vue'),
+                meta: {
+                    id: uuid(),
+                    icon: 'Guide',
+                    moduleKey: 'factorAnalysis',
+                }
+            },
+        ],
+        meta: {
+            id: uuid(),
+            icon: 'Compass',
         }
     },
 
