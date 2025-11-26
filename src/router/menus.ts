@@ -10,16 +10,16 @@ const uuid = () => {
 
 export const menus: Array<RouteRecordRaw> = [
     {
-        name: '首页',
+        name: '仪表盘',
         path: '/home',
         component: () => import('@/views/home/Home.vue'),
         meta: {
             id: uuid(),
-            icon: 'HomeFilled',
+            icon: 'Odometer',
         }
     },
     {
-        name: '系统管理',
+        name: '系统配置',
         path: '/sys',
         children: [
             {

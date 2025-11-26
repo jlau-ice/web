@@ -1,10 +1,10 @@
 <template>
   <el-container>
     <!--border-b border-b-[#e0e0e0] border-solid-->
-    <el-header class="h-[60px] overflow-hidden bg-[#0F72DC] flex items-center">
+    <el-header class="h-[60px] overflow-hidden bg-[#475569] flex items-center">
       <Header/>
     </el-header>
-    <el-container>
+    <el-container class="bg-[#94A3B8]">
       <el-aside width="200px">
         <SideBar/>
       </el-aside>
